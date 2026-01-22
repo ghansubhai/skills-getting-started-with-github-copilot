@@ -87,17 +87,28 @@ section h3 {
 }
 
 .participants-list li {
-  padding: 5px 0 5px 20px;
+  padding: 5px 0 5px 10px;
   position: relative;
   color: #555;
+  display: flex;
+  align-items: center;
 }
 
+/* Remove bullet before each participant */
 .participants-list li:before {
-  content: "•";
-  position: absolute;
-  left: 5px;
-  color: #0066cc;
+  content: "";
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: #d9534f;
+  margin-left: 10px;
   font-weight: bold;
+  transition: color 0.2s;
+  font-size: 1.1em;
+}
+.delete-icon:hover {
+  color: #b52a1a;
 }
 
 .no-participants {
